@@ -43,6 +43,32 @@
             bindings = <&kt LA(F4)>;
             key-positions = <0 1>;
         };
+
+        left_brace {
+            bindings = <&ru_left_brace>;
+            key-positions = <19 20>;
+        };
+
+        right_brace {
+            bindings = <&ru_right_brace>;
+            key-positions = <21 22>;
+        };
+    };
+
+    macros {
+        ru_left_brace: ru_left_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp LEFT_BRACE &kp LG(SPACE)>;
+            label = "RU_LEFT_BRACE";
+        };
+
+        ru_right_brace: ru_right_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp RIGHT_BRACE &kp LG(SPACE)>;
+            label = "RU_RIGHT_BRACE";
+        };
     };
 
     keymap {
